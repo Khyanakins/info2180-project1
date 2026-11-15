@@ -131,32 +131,55 @@ header nav ul li a{
     align-items: flex-start;
 }
 .stories > .container > article{
-    background-color: red;
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;    
+    gap: 30px;
+    margin-bottom: auto auto 40px auto;
 }
-.stories > .container > article > img{
-    width: 200px;
-    height: 200px;
+.stories article img{
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
-.stories > .container > article > div{
-    margin-left: 20px;
-}
+
 .newsletter{
     background-color: green;
-    display: flex;
+    pad: 60px 0;
+    margin-bottom: 10;
     text-align: center;
 }
-.newsletter > .container > p{
+.newsletter p{
+    max-width: 500px;
     background-color: lime;
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: justify;
-    text-wrap: wrap;
-    /*idk why this wont wrap*/
+    margin:0 auto 25px auto;
+    text-align: left;
 }
+.newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.newsletter input[type="email"]{
+    padding: 14px 16px;
+    width: 300px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.newsletter .btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 footer > div{
     background-color: grey;
 }
