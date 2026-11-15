@@ -1,6 +1,6 @@
 /* Add your CSS to this file */
 *{
-    font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 body {
     margin: 0;
@@ -11,12 +11,18 @@ body {
     margin: 20 auto;
     max-width: 960px;
     width: 100%;
-    padding: 5px;
-    margin: auto;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
-header{
-    background-color: green;
+header {
+    /*background-color: green;*/
+    padding: 15px auto;
+}
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 header > div{
     display: flex;
@@ -26,35 +32,47 @@ header > div{
     margin: 10px;
 }
 header > div > h1{
-    background-color: blue;
-    font-size: 15px;
-    padding: auto;
-    
+    /*background-color: blue;*/
+    font-size: 18px;
+    margin: 0;    
 }
 header > div > nav > ul{
     display: flex ;
-    background-color: red;
     list-style-type: none;
-    margin: 15px;
-    padding: 15px;
-    font-size: 15px;
+    padding: 0;
+    gap: 20px;
+    /*background-color: red;*/
 }
-header > div > nav > ul>li{
+header nav ul li a{
     display: flex;
     margin-right: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 
 .overview-hero{
     background-color: #e2e8f0;
+    padding: 50px 0;
 
 }
 .overview-hero > .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 40px;
 }
 .overview-hero-image > img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+}
+.overview-hero-text h2 {
+    font-size: 32px;
+    color: black;
+}
+.learn-about{
+    padding: 50px 0px 80px 0px;
 }
 .learn-about > .container{
     display: flex;
@@ -64,26 +82,49 @@ header > div > nav > ul>li{
 
 }
 .cards{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px
 }
 .card{
     margin: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    width: 250px;
+    height: 250px;
 }
 .testing{
-    background-color: blueviolet;
+    background-color: grey;
+    padding: 60px 0;
 }
 .testing > .container {
-    background-color: violet;
+    background-color: grey;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
-.testing > .container > .cta{
+.testing .cta{
+    display: flex;
+    justify-content: center; /*I want this in the middle*/
+    align-items: center;
+}
+.testing .btn{
     background-color: green;
-    text-align: center;
-    justify-items: center; 
+    padding: 12px 28px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
 }
+.testing .btn:hover{
+    background-color: lime;
+}
+
 .stories > .container{
     display: flex;
     flex-direction: column;
@@ -114,8 +155,10 @@ header > div > nav > ul>li{
     margin-right: 25%;
     text-align: justify;
     text-wrap: wrap;
+    /*idk why this wont wrap*/
 }
 footer > div{
     background-color: grey;
 }
+
 
